@@ -8,44 +8,6 @@ struct stack
   char Isi[MaxS];
   unsigned int Top;
 };
-void INITS (stack &S);
-void PUSH(stack &S, char Data);
-void CETAK(stack S);
-void POP(stack &S, char &Hsl);
-
-main()
-{
-  char huruf;
-  stack S;
-    INITS(S);
-    cout<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    cout<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    cout<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    CETAK(S);
-    POP(S,huruf);
-    cout<<endl<<"Yang Dihapus ...."<<huruf;
-    CETAK(S);
-    cout<<endl<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    cout<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    cout<<"Masukkan Karakter	:";
-    cin>>huruf;
-    PUSH(S,huruf);
-    CETAK(S);
-    POP(S,huruf);
-    cout<<endl<<"Yang Dihapus .... "<<huruf;
-    CETAK(S);
-  getchar();
-}
 void INITS (stack &S)
 {
   S.Top = 0;
@@ -83,4 +45,40 @@ void POP(stack &S, char &Hsl)
   }
   else
     cout<<"stack Kosong ....";
+}
+
+
+
+main()
+{
+  char huruf;
+  stack S;
+    INITS(S);
+    cout<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    cout<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    cout<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    CETAK(S);
+    POP(S,huruf);
+    cout<<endl<<"Yang Dihapus ...."<<huruf;
+    CETAK(S);
+    cout<<endl<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    cout<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    cout<<"Masukkan Karakter	:";
+    cin>>huruf;
+    PUSH(S,huruf);
+    CETAK(S);
+    POP(S,huruf);
+    cout<<endl<<"Yang Dihapus .... "<<huruf;
+    CETAK(S);
+  getchar();
 }
